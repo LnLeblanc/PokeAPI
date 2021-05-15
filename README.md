@@ -1,24 +1,70 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby version : 2.7.2
 
-Things you may want to cover:
+## Pour installer le projet : 
+- ```git pull https://github.com/LnLeblanc/PokeAPI``` 
+- puis lancer la commande ```bundle install``` depuis le dossier racine
 
-* Ruby version
 
-* System dependencies
+## Pour lancer le projet : 
+lancer la commande ```rails server``` depuis le dossier racine
 
-* Configuration
 
-* Database creation
+## Application : 
+Voici les url :
+- Pour afficher les 20 premiers pokemons : ```0.0.0.3000```
+- Pour afficher toutes les infos d'un seul pokemon : ```0.0.0.3000/show/id_du_pokemon```
+- Pour mettre à jour la liste des pokemons : ```0.0.0.3000/update``` 
+(passe automatiquement aux 20 Pokémons suivants au rafraichissement de la page jusqu'à ce qu'il n'y en ait plus)
 
-* Database initialization
 
-* How to run the test suite
+## API :
 
-* Services (job queues, cache servers, search engines, etc.)
+### Récupération de la liste des Pokemons : 
 
-* Deployment instructions
+#### Requête : 
+```
+`GET 0.0.0.3000/index`
+```
 
-* ...
+#### Paramètres de requête : 
+Cette requête n'a besoin d'aucun paramètre
+
+#### Réponse : 
+```json
+{
+  "id": 1
+}
+```
+
+### Update de la liste des Pokemons : 
+
+#### Requête:
+``` 
+`GET 0.0.0.3000/update`
+```
+
+#### Paramètres de requête : 
+Cette requête n'a besoin d'aucun paramètre
+
+#### Réponse : 
+La réponse sera la même que pour la requête précédente, elle renverra juste les 20 Pokemons suivants
+
+
+### Récupération des informations d'un seul Pokemon : 
+
+#### Requête:
+```
+`GET 0.0.0.3000/show`
+```
+
+#### Paramètres de requête :
+Paramètre | Description
+------- | -------
+**id** | **id** doit être de type integer et corresponde à l'id du Pokémon souhaité
+
+#### Réponse : 
+```json
+
+```
