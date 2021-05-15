@@ -14,9 +14,9 @@ lancer la commande ```rails server``` depuis le dossier racine
 ## Application : 
 Voici les url :
 - Pour afficher les 20 premiers pokemons : ```http://0.0.0.3000```
-- Pour afficher toutes les infos d'un seul pokemon : ```http://0.0.0.3000/show/id_du_pokemon```
+- Pour afficher les infos d'un seul pokemon : ```http://0.0.0.3000/show/id_du_pokemon```
 - Pour mettre à jour la liste des pokemons : ```http://0.0.0.3000/update``` 
-(passe automatiquement aux 20 Pokémons suivants au rafraichissement de la page jusqu'à ce qu'il n'y en ait plus)
+(passe automatiquement aux 20 Pokémons suivants au rafraichissement de la page jusqu'à ce qu'il n'y en ait plus. A la fin de la liste, on redémarre avec les 20 premiers Pokemons)
 
 
 ## API :
@@ -86,7 +86,7 @@ La réponse sera la même que pour la requête précédente, elle renverra juste
 > #### Paramètres de requête :
 Paramètre | Description
 ------- | -------
-**id** | **id** doit être de type integer et corresponde à l'id du Pokémon souhaité
+**id** | **id** doit être de type integer et correspondre à l'id du Pokémon souhaité
 
 > #### Réponse : 
 ```json
